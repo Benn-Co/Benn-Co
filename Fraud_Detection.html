@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fraud Detection Artificial Intelligence Solutions </title>
+  
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('Artificial_Intelligence.jpeg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("Fraud_Detection.jpeg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("Fraud.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+
+/* Turn off parallax scrolling for tablets and mobiles */
+@media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+</style>
+<script src="jquery.1.9.1.min.js"></script>
+
+<!-- bootstrap just to have good looking page -->
+<link href="bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+
+<!-- we code these -->
+<script src="myfunctions.js"></script>
+
+
+<style>
+  table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+  th {
+    background-color: rgb(119, 71, 43);
+    color: white;
+}
+  
+  th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover{background-color:#f5f5f5}
+  tr:nth-child(){background-color: #f2f2f2}
+
+</style>
+<style type="text/css">
+body {
+	color:#000000;
+	background-color:#0072C6;
+	margin:0;
+}
+
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	}
+
+a img {
+	border:none;
+}
+
+</style>
+<style>
+    input[type=text]:focus {
+        border: 3px solid #555;
+        background-color: rgb(255, 205, 205);
+        width: auto;
+    }
+    .error{
+        color: red;
+    }
+    body {
+        background-image: url("iisstart.png");
+        background-repeat: repeat-x;
+    }
+    a:link {
+        color: rgb(212, 214, 212);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(47, 13, 13);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       color: antiquewhite;
+       background-color: #333;
+    }
+
+    li {
+       float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+       background-color: #4CAF50;
+    }
+</style>
+<style>
+  .buttonn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(20, 12, 1);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .buttonn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttonn span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttonn:hover span {
+    padding-right: 25px;
+  }
+  
+  .buttonn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  </style>
+
+<link rel="stylesheet" href="bootstrap.min.css">
+    
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<link rel="stylesheet" href="index2.css">
+
+<script src="index2.js"></script>
+
+  </head>
+
+<body class="w3-light-grey bgimg-1">
+
+ 
+  <div class="container nav-container" style="margin: auto;height: auto;width: auto; background-color: transparent"> 
+     
+    <section class="navbar navbar-default navbar-fixed-top" id="top" style="margin: auto;height: auto;width: auto;background-color:transparent">
+     <nav class="navbar navbar-fixed-top" style="margin: auto;width: auto;height: auto">
+      <img id="benn_co_logo" src="benn_co.png" alt="benn_co.png" class="w3-circle " style="width:46px;height: 50px;float: left;" height="50px">
+      <section style="list-style-type: none;padding: 0;margin:auto; float: left; height: auto; width: auto;background-color: transparent">
+        <div class="col-md-6 p0 image" style="height:auto;width: auto;background-color:transparent">
+  
+          <div class="" style=" margin: auto;height: auto;width: auto;background-color: transparent">
+            <a href="index.html" class="navbar-header navbar-brand buttonn" style="margin:auto; display: inline; background-color: transparent" href="index.html">        
+              <i class="fa fa-bars"></i><span>        
+              Benn<strong> Co</strong></span>
+            </a>
+          </div>   
+                  
+        </div>
+      </section>
+  
+      <section style="list-style-type: none;padding: 0;margin:auto; float: right; height: auto; width: auto;background-color: transparent">
+        <div class="col-md-6 p0 image" style="height:auto;width: auto;background-color:transparent">
+  
+          <div class="" style=" margin: auto;height: auto;width: auto;background-color: transparent">
+            <a class="navbar-header navbar-brand buttonn" style="margin:auto; display: inline; background-color: transparent" >        
+              <i class="fa fa-bars"></i><span onclick="artificial_intelligence_solutions()">        
+                Artificial Intelligence Solutions</span>
+            </a>
+            <a class="navbar-header navbar-brand buttonn" style="margin:auto; display: inline; background-color: transparent" href="">        
+              <i class="ti-facebook"></i></a>
+            <a class="navbar-header navbar-brand buttonn" style="margin:auto; display: inline; background-color: transparent" href="">        
+              <i class="ti-twitter-alt"></i></a>
+            <a class="navbar-header navbar-brand buttonn" style="margin:auto; display: inline; background-color: transparent">        
+              <i class="ti-instagram"></i></a>
+          </div>   
+                  
+        </div>
+      </section>
+  
+    
+  
+  
+  
+     </nav>
+    </section>
+  
+  </div>
+  
+  <!-- Top container -->
+  <!-- Top container -->
+  
+  <div id="mySidenavDiv" style="display: block;" >
+  <!-- Sidenav/menu -->
+  <nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;display: none;" id="mySidenav"><br>
+    <ul id="sidenav_account" class="w3-black" style="display: none;list-style: none;float: inline-start;">
+      <li style="height: auto;float: left;"><a class="active w3-hover-text-grey button" onclick="account_register()" ><i class="fa fa-bars"></i> Register</a></li>
+      <li style="height: auto;float: right;"><a class="active w3-hover-text-grey button" onclick="account_login()" ><i class="fa fa-bars"></i> Login</a></li> 
+    </ul>
+    
+    
+  <div id="account" class="w3-container" style="display: none;">
+  
+    <h2><span id="span_login">Account</span></h2>
+  
+  
+  
+    <span  id="span_account_login" class="buttonn"><span  onclick="account_login()" >Login</span></span>
+    <span  id="span_account_register" class="buttonn"><span onclick="account_register()" >Register</span></span>
+  
+  
+    <div id="username_account_live" class="w3-container w3-row" style="display: none;">
+      <span class=""><span id="span_login_out" >Sign out</span></span>
+  
+      <div class="w3-col s4">
+          <img id="user_image" src="img_avatar2.png" alt="img_avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
+      </div>
+      <div class="w3-col s8">
+        <span>Welcome, <strong id="username" >Mike</strong></span><br>
+        <a  class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
+        <a  class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
+        <a  class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
+      </div>
+  
+      <hr>
+      <div class="w3-container">
+        <h5>Dashboard</h5>
+        <div class="w3-container" style="margin:10px;"> 
+          <p>Local time: <output id="result"></output></p>       
+        </div>
+      </div>
+  
+      
+  
+    </div>
+  
+  
+  
+  
+  
+  
+  
+    
+    <section id="register" name="register" class="w3-container" style="display: none;">
+  
+  
+  
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_register_first_name_Data()" onkeyup="onfocus_validate_register_first_name_Data()" onfocusout="onfocusout_validate_register_first_name_Data()" id="register_first_name" name="register_first_name" type="text" style="width:auto" placeholder="First Name"><br>
+     
+      <p id="span_register_first_name" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+      
+  
+  
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_register_last_name_Data()" onkeyup="onfocus_validate_register_last_name_Data()" onfocusout="onfocusout_validate_register_last_name_Data()" id="register_last_name" name="register_last_name" type="text" style="width:auto" placeholder="Last Name"><br>
+     
+      <p id="span_register_last_name" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+      
+  
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_register_email_Data()" onkeyup="onfocus_validate_register_email_Data()" onfocusout="onfocusout_validate_register_email_Data()" id="register_email" name="register_email" type="email" style="width:auto" placeholder="Email"><br>
+     
+      <p id="span_register_email" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+      
+      
+  
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_register_password_Data()" onkeyup="onfocus_validate_register_password_Data()" onfocusout="onfocusout_validate_register_password_Data()" id="register_password" name="register_password" type="password" style="width:auto" placeholder="Password"><br>
+     
+      <p id="span_register_password" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+      
+  
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_register_repeat_password_Data()" onkeyup="onfocus_validate_register_repeat_password_Data()" onfocusout="onfocusout_validate_register_repeat_password_Data()" id="register_repeat_password" name="register_repeat_password" type="password" style="width:auto" placeholder="Repeat Password"><br>
+     
+      <p id="span_register_repeat_password" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+      
+      
+      <button class="w3-padding w3-brown w3-hover-blue buttonn" id="sign_up" name="sign_up" onclick="account_sign_up_validate_Data()"><span id="span_sign_up">Sign Up</span></button>
+  
+  
+  
+    </section>
+  
+    <hr>
+  
+  
+  
+    <section id="login" name="login" class="w3-container" style="display: none;">
+     
+  
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_login_email_Data()" onkeyup="onfocus_validate_login_email_Data()" onfocusout="onfocusout_validate_login_email_Data()" id="login_email" name="login_email" type="email" style="width:auto" placeholder="Email"><br>
+     
+      <p id="span_login_email" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+      
+  
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_login_password_Data()" onkeyup="onfocus_validate_login_password_Data()" onfocusout="onfocusout_validate_login_password_Data()" id="login_password" name="login_password" type="password" style="width:auto" placeholder="Password"><br>
+      <p id="span_login_password" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+        
+  
+      <button class="w3-padding w3-brown w3-hover-blue buttonn" id="sign_in" name="sign_in" onclick="account_sign_in_validate_Data()"><span id="span_sign_in">Sign In</span></button>
+      <p id="span_forgot_login_password_span_sign_in" onclick="forgot_login_password()" class="w3-padding-16 " style="font-size: small; color: rgb(49, 0, 0);"></p>
+  
+      
+  
+      
+    </section>
+  
+  
+  
+    <section id="forgot_login_password" name="forgot_login_password" class="w3-container" style="display: none;">
+    
+      <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_forgot_login_password_email_Data()" onkeyup="onfocus_validate_forgot_login_password_email_Data()" onfocusout="onfocusout_validate_forgot_login_password_email_Data()" id="forgot_login_password_email" name="forgot_login_password_email" type="email" style="width:auto" placeholder="Email"><br>
+     
+      <p id="span_forgot_login_password_email" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+      
+  
+  <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_forgot_login_password_Data()" onkeyup="onfocus_validate_forgot_login_password_Data()" onfocusout="onfocusout_validate_forgot_login_password_Data()" id="login_password_forgot_login_password" name="login_password_forgot_login_password" type="password" style="width:auto" placeholder="Password"><br>
+  <p id="span_forgot_login_password" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+   
+  <input class="w3-container w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_forgot_login_password_Data()" onkeyup="onfocus_validate_forgot_login_password_Data()" onfocusout="onfocusout_validate_forgot_login_password_Data()" id="repeat_login_password_forgot_login_password" name="repeat_login_password_forgot_login_password" type="password" style="width:auto" placeholder="Repeat Password"><br>
+  <p id="span_repeat_forgot_login_password" class="w3-padding-16 " style="font-size: small; color: red;"></p>
+   
+  
+  
+  <button class="w3-padding w3-brown w3-hover-blue buttonn" id="forgot_login_password_sign_in" name="forgot_login_password_sign_in" onclick="account_forgot_login_password_sign_in_validate_Data()"><span id="span_forgot_login_password_sign_in">Reset password</span></button>
+  
+  
+  
+    
+    </section>
+  
+  
+  
+    <section id="verify_email_code" name="verify_email_code" class="w3-container" style="display: none;">
+  
+    <input class="w3-container w3-red w3-padding-16 w3-input w3-animate-input w3-hover-brown" onfocus="onfocus_validate_verify_code_Data()" onkeyup="onfocus_validate_verify_code_Data()" onfocusout="onfocusout_validate_verify_code_Data()" id="verify_code" name="verify_code" type="text" placeholder="Enter 4 digit code">
+    <p id="span_verify_code" class="w3-padding-16 " style="font-size: small; color: rgb(36, 0, 0);"></p>
+    
+  
+  
+    </section>
+  
+  
+    
+  
+  </div>
+  
+  
+    
+  
+    <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <br>
+    
+    <a href="Smart_Houses_And_AI.html" class="w3-padding " ><i class="fa fa-cog fa-fw"></i>  Smart House And AI</a><br><br>
+    <br>
+    <a href="index.html" class="w3-padding " ><i class="fa fa-cog fa-fw"></i>  The Clouds And Data Centers</a><br><br>
+    <br>
+    <a href="Predictive_Maintenance.html" class="w3-padding " ><i class="fa fa-cog fa-fw"></i> Predictive Maintenance</a><br><br>
+    <br>
+    <a href="Fraud_Detection.html" class="w3-padding " ><i class="fa fa-cog fa-fw"></i> Fraud Detection</a><br><br>
+    <br>
+    <a href="Sensor_Health.html" class="w3-padding " ><i class="fa fa-cog fa-fw"></i> Sensor Health</a><br><br>
+    <br>
+    <a href="Energy_Management.html" class="w3-padding " ><i class="fa fa-cog fa-fw"></i> Energy Management</a><br><br>
+    <br>
+    <a href="Anti-Money_Laundering.html" class="w3-padding " ><i class="fa fa-cog fa-fw"></i> Anti-Money Laundering</a><br><br>
+    <br>
+    <br>
+  </nav>
+  </div>
+
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+ <div class="w3-main bgimg-2 " style="margin-left:auto;margin-top:auto;">
+
+    <div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large">
+        <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+        <span id="myIntro" class="w3-hide"> Fraud Detection</span>
+      </div>
+      
+        
+        <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+          <h1 class="w3-xxxlarge w3-padding-16">Fraud Detection</h1>
+        </header>
+        
+        <div class="w3-container w3-padding-32" style="padding-left:32px">
+        
+        <h2>Identify Fraudulent Actors and Safeguard Revenues </h2>
+        <ul class="w3-leftbar w3-theme-border" style="list-style:none">
+            <li> Fraud Detection™ pinpoints patterns in event data streams that identify revenue leakage or maintenance and safety issues so investigation teams can act upon a single, continuously updated, and prioritized queue of leads.</li>
+        </ul>
+
+           <br>
+        
+        <p>Identify fraud due to energy theft</p>
+
+        <p>Identify fraud due to identity theft</p>
+
+        <p>Identify fraud due to illegal healthcare claims</p>
+
+        <p>Identify fraud due to employee misconduct</p>
+
+        
+        
+        
+        <hr>
+        <h2>Features</h2>
+
+        <h3>Executive dashboard</h3>
+        <p>Access a summary of the work queue, operational performance, prioritized leads, and geospatial view of occurrences of theft or other loss.</p>
+        
+        <hr>
+
+        <h3>Loss detection analytics</h3>
+        <p>Detect physical and informational breaches and correlate unusual customer patterns with device diagnostics and operations to identify non-technical loss.</p>
+        
+        <hr>
+        
+        <h3>Advanced pipeline management</h3>
+        <p>Identify and prioritize high-value and high-likelihood leads with increasing precision based on historical confirmed instances of theft or other loss.</p>
+        
+        <hr>
+        <h3>Investigation management</h3>
+        <p>Monitor and analyze identified leads, investigations in the field, and completed investigations, and review results.</p>
+        
+        <hr>
+        <h3>Revenue reporting and monitoring</h3>
+        <p>Present analyses and summarize results using preformatted and custom reports, including loss analysis, identified and realized value, and financial performance against budget.</p>        
+        
+        
+        <hr>
+        <h2>Operating the Largest Production Deployment of AI and IoT Applications</h2>
+        <h3>Revenue Protection gives the opportunity to provide a software for people to use in the field.”</h3>   
+          <div class="buttonn">
+        <p>The combination of our data science expertise and the software development expertise that our AI solutions brings is really powerful.</p> 
+        <span>We embarked on a platform journey – a widespread adoption of the platform-based model for machine learning and artificial intelligence.</span>  
+          </div>
+        <div class="w3-container w3-padding-16 w3-card-2" style="background-color:#eee">
+        <h3 class="w3-center">Benefits</h3>
+                
+        <h2 class="w3-section w3-text-teal">Analyze</h2>
+        <div class="w3-container w3-light-grey"><p>Analyze multiple data systems including customer data, network anomalies, previous work activity, device telemetry, billing and payment history, and tip-line reports.</p></div><br>
+         
+        <h2 class="w3-section w3-text-teal">Identify</h2>
+        <div class="w3-container w3-grey"><p>Quickly identify instances of revenue loss with dashboards showing the location, details, likelihood, and estimated value of theft cases.</p></div><br>
+        
+        <h2 class="w3-section w3-text-teal">Pinpoint</h2>
+        <div class="w3-container w3-dark-grey"><p>Pinpoint non-technical loss with machine learning algorithms that correlate prior issues of loss and theft with near real-time updates to provide the most accurate predictions of ongoing malfeasance.</p></div><br>
+        
+        <h2 class="w3-section w3-text-teal">Assign</h2>
+        <div class="w3-container w3-black"><p>Assign prioritized leads to field investigation teams to confirm and resolve theft and loss cases.</p></div><br>
+        
+        <h2 class="w3-section w3-text-teal">Increase</h2>
+        <div class="w3-container w3-grey"><p>Increase the accuracy of lead prioritization to identify and track new modes of theft using validated field investigation results.</p></div><br>
+        
+        <h2 class="w3-section w3-text-teal">Forecast</h2>
+        <div class="w3-container w3-dark-grey"><p>Forecast the financial impact of identified and verified cases to field and office operations.</p></div><br>
+        
+        <h2 class="w3-section w3-text-teal">Enhance</h2>
+        <div class="w3-container w3-dark-grey"><p>Enhance revenue recovery by identifying high-likelihood and high-value fraud detection leads, and continuously improve the quality of leads over time.</p></div><br>
+       
+        <h2 class="w3-section w3-text-teal">Reduce</h2>
+        <div class="w3-container w3-light-grey"><p>Reduce investigation and case review costs through accurate issue identification, rapid prioritization, efficient investigation scheduling, and robust reporting capabilities.</p></div><br>
+              
+        <section class="columns-container">
+           
+            <div class="grid-container">
+               
+                <h1 class="section-title" data-reveal-animation="slide-right" >Data Sources </h1 >
+                   
+                    <div class="grid-x grid-margin-y grid-margin-x">
+                     
+                        <div data-reveal-animation="slide-up" class="cell large-9 medium-9 small-12">
+                            <p> By analyzing data from multiple systems and applying advanced machine learning algorithms, Our Fraud Detection detects non-technical loss, quantifies the amount of revenue and loss at stake, and prioritizes leads for investigation.</p>
+
+                            <p> Fraud Detection tracks and manages leads through the entire life cycle of investigation, confirmation, and closure so that investigators can identify trends and develop long-term revenue assurance plans.</p>
+
+
+                                &nbsp;</p>
+                        </div>
+                    
+                    </div><!--.grid-x-->
+                
+            </div>
+        </section>
+        
+        
+        </div>
+        <br>
+
+        </div>
+       
+             
+      
+        
+
+  
+ <!-- Footer -->
+ <div class="w3-row w3-section">
+  <div class="w3-third w3-container w3-black w3-large" style="height:250px">
+    <h2>Contact Info</h2>
+    <p><i class="fa fa-map-marker" style="width:30px"></i> Nairobi, Kenya</p>
+    <p><i class="fa fa-envelope" style="width:30px"> </i> Email: emjye@mail.com</p>
+  </div>
+  <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:250px">
+    <h2>Contact Us</h2>
+    <p>If you have an idea.</p>
+    <p>We are ideally placed to help you make the most of the new, integrated world</p>
+  </div>
+  <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:250px">
+    <h2>Like Us</h2>
+    <i class="w3-xlarge fa fa-facebook-official"></i><br>
+    <i class="w3-xlarge fa fa-pinterest-p"></i><br>
+    <i class="w3-xlarge fa fa-twitter"></i><br>
+    <i class="w3-xlarge fa fa-flickr"></i><br>
+    <i class="w3-xlarge fa fa-linkedin"></i>
+  </div>
+</div>
+
+<hr>
+<br>
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <h4><strong>Benn Co</strong> AI Solutions</h4>
+    <p>Powered by <a href="#" target="_blank">Benn Co</a></p>
+  </footer>
+  
+  
+  <script src="newjavascript.js"></script>
+
+
+  
+  <!-- End page content -->
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
