@@ -24,11 +24,14 @@ function w3_open() {
 
     
 function artificial_intelligence_solutions(){
+ 
 
-  if (mySidenavDiv.style.display === 'block') {
-    mySidenavDiv.style.display = 'none';
+  if (mySidenavDiv.style.display === 'none') {
+    mySidenav.style.display = 'block';
+    overlayBg.style.display = "block";
+    mySidenavDiv.style.display = 'block';
 } else {
-  mySidenavDiv.style.display = 'block';
+  mySidenavDiv.style.display = 'none';
 }
 
 
