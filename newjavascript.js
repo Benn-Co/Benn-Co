@@ -9,14 +9,18 @@ var overlayBg = document.getElementById("myOverlay");
 
 var mySidenavDiv =   document.getElementById("mySidenavDiv");
 
+var solutions = document.getElementById("solutions");
 // Toggle between showing and hiding the sidenav, and add overlay effect
 function w3_open() {
     if (mySidenav.style.display === 'block') {
         mySidenav.style.display = 'none';
         overlayBg.style.display = "none";
+        solutions.style.display = "none";
     } else {
         mySidenav.style.display = 'block';
         overlayBg.style.display = "block";
+        solutions.style.display = "block";
+
     }
 }
 
@@ -30,8 +34,12 @@ function artificial_intelligence_solutions(){
     mySidenav.style.display = 'block';
     overlayBg.style.display = "block";
     mySidenavDiv.style.display = 'block';
+    solutions.style.display = "none";
+
 } else {
   mySidenavDiv.style.display = 'none';
+  solutions.style.display = "block";
+
 }
 
 
@@ -60,14 +68,23 @@ function myFunction() {
       document.getElementById("myTop").classList.add("w3-card-4");
       document.getElementById("myIntro").classList.add("w3-show-inline-block");
       document.getElementById("mySidenavDiv").style.display = 'none';
+      document.getElementById("solutions").style.display = 'none';
 
   } else {
 
       document.getElementById("myIntro").classList.remove("w3-show-inline-block");
       document.getElementById("myTop").classList.remove("w3-card-4");
       document.getElementById("mySidenavDiv").style.display = 'block';
+      document.getElementById("solutions").style.display = 'block';
+    }
+
+  if (document.getElementById("mySidenavDiv").style.display === 'none'){
+    document.getElementById("solutions").style.display = 'block';
+    } else {
+     document.getElementById("solutions").style.display = 'none';
 
   }
+
 }
 
 // Accordions
