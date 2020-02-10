@@ -1,14 +1,10 @@
 
-
-
-
-
 //var dataURL = "https://api.worldtradingdata.com/api/v1/stock?symbol=SNAP,TWTR,VOD.L&api_token=BreLKhDeByruiWpSqCRrifsFes0iJ01P397SWoEP0b8WhmiZIh83Pjv3rQcY";
 //var dataURL = "https://api.worldtradingdata.com/api/v1/stock?symbol=SNAP,TWTR,VOD.L&api_token=Y25jr1qopqpRiw1Pnrh7UbTNHrArsN5w6hMWMjNSPn0kbZArsIztxGe1f7Cc";
 var dataURL;// = "https://api.worldtradingdata.com/api/v1/stock?symbol=SNAP,TWTR,VOD.L&api_token=kY534ZUOm0ThakHrPi9RYxYQUnNObFyQg12OYoyhhMmzUtYIoU5bPmBYPWoA";
 //sendAjax();
 var w;
-startWorker();
+
 function startWorker() {
  
                     if(typeof(Worker) !== "undefined") {
@@ -16,10 +12,9 @@ function startWorker() {
                             w = new Worker("real_time_data.js");
                         }
                         w.onmessage = function(event) {
-                           
+
                             document.getElementById("result").innerHTML = event.data;
-                            document.getElementById("mySidenav").style.display = none;
-                            
+
                         };
                     } else {
                         document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
@@ -37,7 +32,7 @@ function stopWorker() {
 
 function sendAjax() {
  
-		// get inputs
+	// get inputs
 	var article = new Object();
 	article.title = $('#title').val();
 	article.symbol = $('#symbol').val();
@@ -109,13 +104,13 @@ function sendAjax() {
                 		.append($('<td/>').html("<a href='"+article.url+"'>"+article.last_trade_time+"</a>"))
                 		.append($('<td/>').html("<a href='"+article.url+"'>"+article.pe+"</a>"))
                 		.append($('<td/>').html("<a href='"+article.url+"'>"+article.eps+"</a>"))
-                  		.append($('<td/>').html("<a href='"+article.url+"'>"+article.given_value+"</a>"))
-                		.append($('<i/>').html("<span href='"+article.url+"'>"+article.predicted_value+"</span>"))
+                		.append($('<td/>').html("<a href='"+article.url+"'>"+article.given_value+"</a>"))
+                		.append($('<td/>').html("<a href='"+article.url+"'>"+article.predicted_value+"</a>"))
+                		
                 );
-             
-               $("#span_check_ai_option").html(article.predicted_value);     
-             
             
+               $("#span_check_ai_option").html(article.predicted_value);     
+
                 
             }); 
         },
@@ -123,14 +118,11 @@ function sendAjax() {
 			alert("error: "+data+" status: "+status+" er:"+er);
 		}
 	});
-        
-              
 }
 
 
 function load_URL_data(){
-    dataURL = document.getElementById("url").value;
-    startWorker();
+    
     ajax_get(dataURL, function(JSONdata) {
  
     var symbols_requested = "<h2>" + JSONdata["symbols_requested"] + "</h2>";    
@@ -247,9 +239,9 @@ real_time_data ='{"data": ['+
            '{"last_trade_time": "2020-01-24 16:03:40"},'+
            '{"pe": "N/A"},'+
            '{"eps": "-0.72"},'+
-           '{"options": ""},'+
-           '{"url": "https://api.worldtradingdata.com/api/v1/stock?symbol=SNAP,TWTR,VOD.L&api_token=kY534ZUOm0ThakHrPi9RYxYQUnNObFyQg12OYoyhhMmzUtYIoU5bPmBYPWoA"},'+
-           '{"ai_options": ""}]}';
+           '{"options": "sell"},'+
+           '{"url": "url"},'+
+           '{"ai_options": "sell"}]}';
 
 function symbol() {
 var symbol = document.getElementById("symbol");
@@ -427,7 +419,6 @@ document.getElementById("ai_options").value = obj.data[26].ai_options;
 
 
 function load_real_time_data(){
-    startWorker();
     symbol();
     name();
     currency();

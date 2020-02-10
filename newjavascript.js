@@ -1,48 +1,60 @@
  // Get the Sidenav
-var mySidenav = document.getElementById("mySidenav");
+ var mySidenav = document.getElementById("mySidenav");
 
-// Get the display_all
-var display_all = document.getElementById("display_all");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-var mySidenavDiv =   document.getElementById("mySidenavDiv");
-
-var solutions = document.getElementById("solutions");
-// Toggle between showing and hiding the sidenav, and add overlay effect
-function w3_open() {
-    if (mySidenav.style.display === 'block') {
-        mySidenav.style.display = 'none';
-        overlayBg.style.display = "none";
-        solutions.style.display = "none";
-    } else {
-        mySidenav.style.display = 'block';
-        overlayBg.style.display = "block";
-        solutions.style.display = "block";
-
-    }
-}
-
-// Toggle between showing and hiding the sidenav, and add overlay effect
-
-    
-function artificial_intelligence_solutions(){
+ // Get the display_all
+ var display_all = document.getElementById("display_all");
  
-
-  if (mySidenavDiv.style.display === 'none') {
-    mySidenav.style.display = 'block';
-    overlayBg.style.display = "block";
-    mySidenavDiv.style.display = 'block';
-    solutions.style.display = "none";
-
-} else {
-  mySidenavDiv.style.display = 'none';
-  solutions.style.display = "block";
-
-}
-
-
+ // Get the DIV with overlay effect
+ var overlayBg = document.getElementById("myOverlay");
+ 
+ var mySidenavDiv =   document.getElementById("mySidenavDiv");
+ 
+ var solutions = document.getElementById("solutions");
+ 
+ var Pricing_section = document.getElementById("Pricing_section");
+ // Toggle between showing and hiding the sidenav, and add overlay effect
+ function w3_open() {
+     if (mySidenav.style.display === 'block') {
+         mySidenav.style.display = 'none';
+         overlayBg.style.display = "none";
+         solutions.style.display = "none";
+     } else {
+         mySidenav.style.display = 'block';
+         overlayBg.style.display = "block";
+         solutions.style.display = "block";
+ 
+     }
+ }
+ 
+ // Toggle between showing and hiding the sidenav, and add overlay effect
+ function Pricing(){
+    
+     if (Pricing_section.style.display === 'none') {
+     Pricing_section.style.display = 'block';
+    
+     } else {
+     Pricing_section.style.display = 'none';
+ 
+     }
+ 
+     
+ }
+     
+ function artificial_intelligence_solutions(){
+  
+ 
+   if (mySidenavDiv.style.display === 'none') {
+     mySidenav.style.display = 'block';
+     overlayBg.style.display = "block";
+     mySidenavDiv.style.display = 'block';
+     solutions.style.display = "none";
+ 
+ } else {
+   mySidenavDiv.style.display = 'none';
+   solutions.style.display = "block";
+ 
+ }
+ 
 }
 // Close the sidenav with the close button
 function w3_close() {
@@ -58,8 +70,9 @@ function display_All() {
     
 }
 
-      
- 
+  
+
+
 
 // Change style of top container on scroll
 window.onscroll = function() {myFunction()};
@@ -87,18 +100,7 @@ function myFunction() {
 
 }
 
-// Accordions
-function myAccordion(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-      x.previousElementSibling.className += " w3-theme";
-  } else { 
-      x.className = x.className.replace("w3-show", "");
-      x.previousElementSibling.className = 
-      x.previousElementSibling.className.replace(" w3-theme", "");
-  }
-}
+
 
 
 
@@ -139,7 +141,7 @@ function onfocus_validate_price_open_Data(){
 
   }
 
-  function onfocus_validate_price_Data(){
+function onfocus_validate_price_Data(){
 
 var price = document.getElementById("price").value;
 
@@ -174,6 +176,87 @@ document.getElementById("span_price").innerHTML = "";
 }
 
 }
+
+
+
+
+function onfocus_validate_day_high_Data(){
+
+var day_high = document.getElementById("day_high").value;
+
+if (isNaN(day_high)) {
+
+document.getElementById("span_day_high").innerHTML = "Input must be a number";
+return false;
+}                
+
+document.getElementById("day_high").style.borderColor = "white";
+document.getElementById("span_day_high").innerHTML = "";
+
+
+}
+
+function onfocusout_validate_day_high_Data(){
+
+var day_high = document.getElementById("day_high").value;
+
+if (day_high ===null || day_high === "") {
+document.getElementById("day_high").style.borderColor = "red" ;
+document.getElementById("day_high").style.backgroundColor = "white";
+document.getElementById("span_day_high").innerHTML = "input number";
+return false;
+
+}
+else {
+document.getElementById("day_high").style.borderColor = "white";
+document.getElementById("span_day_high").innerHTML = "";
+
+
+}
+
+}
+
+
+
+
+
+function onfocus_validate_day_low_Data(){
+
+var day_low = document.getElementById("day_low").value;
+
+if (isNaN(day_low)) {
+
+document.getElementById("span_day_low").innerHTML = "Input must be a number";
+return false;
+}                
+
+document.getElementById("day_low").style.borderColor = "white";
+document.getElementById("span_day_low").innerHTML = "";
+
+
+}
+
+function onfocusout_validate_day_low_Data(){
+
+var day_low = document.getElementById("day_low").value;
+
+if (day_low ===null || day_low === "") {
+document.getElementById("day_low").style.borderColor = "red" ;
+document.getElementById("day_low").style.backgroundColor = "white";
+document.getElementById("span_day_low").innerHTML = "input number";
+return false;
+
+}
+else {
+document.getElementById("day_low").style.borderColor = "white";
+document.getElementById("span_day_low").innerHTML = "";
+
+
+}
+
+}
+
+
 
 
 function onfocus_validate_close_yesterday_Data(){
@@ -242,13 +325,27 @@ return false;
 }
 
 }
+
+function check(){
+    
+    onfocusout_validate_options_Data();
+    onfocusout_validate_price_Data();
+    onfocusout_validate_price_open_Data();
+    onfocusout_validate_day_high_Data();
+    onfocusout_validate_day_low_Data();
+    
+}
 function ai_options_validate_Data(){
+    
+    check();
+    
 var options = onfocusout_validate_options_Data();
-var close_yesterday = onfocusout_validate_close_yesterday_Data();
 var price = onfocusout_validate_price_Data();
 var price_open = onfocusout_validate_price_open_Data();
+var day_high = onfocusout_validate_day_high_Data();
+var day_low = onfocusout_validate_day_low_Data();
 
-if (options === false || close_yesterday === false || price === false || price_open === false) {
+if (day_high === false || day_low === false || options === false || price === false || price_open === false) {
 
 document.getElementById("check_ai_option").style.borderColor = "red" ;
 document.getElementById("check_ai_option").style.backgroundColor = "brown";
@@ -257,19 +354,14 @@ return false;
 
 }
 else {
-var ai_options = document.getElementById("span_check_ai_option").value;
-document.getElementById("ai_options").innerHTML = ai_options;
 
 document.getElementById("check_ai_option").style.borderColor = "white";
-
-
 sendAjax();
-
-
 document.getElementById("span_check_ai_option").innerHTML = "processing ai option";
 
-ai_options = document.getElementById("span_check_ai_option").value;
-document.getElementById("ai_options").innerHTML = ai_options;
+//var ai_options = document.getElementById("span_check_ai_option").value;
+//document.getElementById("ai_options").innerHTML = ai_options;
+
 
 
 }
@@ -277,6 +369,10 @@ document.getElementById("ai_options").innerHTML = ai_options;
 
 }
 function validate_url_Data() {
+ 
+    var ai_options = document.getElementById("span_check_ai_option").value;
+    //document.getElementById("ai_options").value =ai_options ;// $('#span_check_ai_option').val();;
+            
 //var x = document.a["url_Data"]["url"].value;
 var x = document.getElementById("url").value;
 if (x == null || x == "") {
@@ -426,14 +522,14 @@ else{
 
 
 
-           send_ajax_verification_code();
+          // send_ajax_verification_code();
 
 
           document.getElementById("span_login").innerHTML = "Verifying your account...";
 
           // send_ajax_verification_code(); will set innerHTML value 'successful verification ..' if successful verification
 
-          //document.getElementById("span_verify_code").innerHTML = "successful verification";
+          document.getElementById("span_verify_code").innerHTML = "successful verification";
 
               
           var span_verify_code = document.getElementById("span_verify_code").innerHTML;
@@ -498,7 +594,7 @@ else{
 
       document.getElementById("span_sign_in").innerHTML = "Sign In";
 
-      send_ajax_sign_in();
+     // send_ajax_sign_in();
 
 
       document.getElementById("span_sign_in").innerHTML = "Processing...";
@@ -509,7 +605,7 @@ else{
      
      // document.getElementById("span_login").innerHTML = "Login success..";
 
-      //document.getElementById("span_login").innerHTML = "Login not successful.";
+      document.getElementById("span_login").innerHTML = "Login not successful.";
 
 
       login(); 
@@ -634,27 +730,13 @@ var login_password= document.getElementById("login_password").value;
       function onfocusout_validate_forgot_login_password_email_Data(){
 
         var forgot_login_password_email = document.getElementById("forgot_login_password_email").value;
-        
-       const validateEmail = function(forgot_login_password_email) {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(forgot_login_password_email).toLowerCase());
-  };
 
-          if (forgot_login_password_email === null || forgot_login_password_email === "") {
+          if (forgot_login_password_email === null || forgot_login_password_email === "" || forgot_login_password_email === false) {
             document.getElementById("forgot_login_password_email").style.borderColor = "red" ;
             document.getElementById("forgot_login_password_email").style.backgroundColor = "white";
               return false;
 
           }
-           else if(validateEmail === false){
-     document.getElementById("forgot_login_password_email").style.borderColor = "red" ;
-    document.getElementById("forgot_login_password_email").style.backgroundColor = "white";
-        document.getElementById("span_forgot_login_password_email").innerHTML = "Must be valid email. example@yourdomain.com";
-
-      return false;
- 
-      
-  }
           else {
             document.getElementById("forgot_login_password_email").style.borderColor = "white";
             document.getElementById("span_forgot_login_password_email").innerHTML = "";
@@ -763,7 +845,7 @@ var login_password= document.getElementById("login_password").value;
 
       document.getElementById("span_forgot_login_password_sign_in").innerHTML = "Reset password";
 
-      send_ajax_forgot_password();
+      //send_ajax_forgot_password();
 
 
       document.getElementById("span_forgot_login_password_sign_in").innerHTML = "Processing...";
@@ -776,7 +858,7 @@ var login_password= document.getElementById("login_password").value;
 
 
 
-      //document.getElementById("span_forgot_login_password_sign_in").innerHTML = "success..";
+      document.getElementById("span_forgot_login_password_sign_in").innerHTML = "success..";
 
 
       var span_forgot_login_password_sign_in = document.getElementById("span_forgot_login_password_sign_in").innerHTML;
@@ -817,32 +899,15 @@ document.getElementById("span_sign_in").innerHTML = "Sign In";
 
 }
 
-
-
 function onfocusout_validate_login_email_Data(){
 
 var login_email = document.getElementById("login_email").value;
 
-const validateEmail = function(login_email) {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(login_email).toLowerCase());
-  };
-
-
-  if (login_email === null || login_email === "") {
+  if (login_email === null || login_email === "" || login_email === false) {
     document.getElementById("login_email").style.borderColor = "red" ;
     document.getElementById("login_email").style.backgroundColor = "white";
       return false;
 
-  }
-  else if(validateEmail === false){
-     document.getElementById("login_email").style.borderColor = "red" ;
-    document.getElementById("login_email").style.backgroundColor = "white";
-        document.getElementById("span_login_email").innerHTML = "Must be valid email. example@yourdomain.com";
-
-      return false;
- 
-      
   }
   else {
     document.getElementById("login_email").style.borderColor = "white";
@@ -919,7 +984,7 @@ function account_sign_up_validate_Data(){
 
           document.getElementById("span_sign_up").innerHTML = "Sign Up";
 
-           send_ajax_sign_up();
+          // send_ajax_sign_up();
 
 
           document.getElementById("span_sign_up").innerHTML = "Processing...";
@@ -932,7 +997,7 @@ function account_sign_up_validate_Data(){
 
 
 
-         // document.getElementById("span_sign_up").innerHTML = "success..";
+          document.getElementById("span_sign_up").innerHTML = "success..";
 
 
           var span_sign_up = document.getElementById("span_sign_up").innerHTML;
@@ -1046,23 +1111,11 @@ document.getElementById("span_sign_up").innerHTML = "Sign Up";
 function onfocusout_validate_register_email_Data(){
 
 var register_email = document.getElementById("register_email").value;
- const validateEmail = function(register_email) {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(register_email).toLowerCase());
-  };
 
   if (register_email === null || register_email === "") {
     document.getElementById("register_email").style.borderColor = "red" ;
     document.getElementById("register_email").style.backgroundColor = "white";
     document.getElementById("span_sign_up").innerHTML = "Input Email";
-
-    return false;
-
-  }
-  else if(validateEmail === false){
-     document.getElementById("register_email").style.borderColor = "red" ;
-    document.getElementById("register_email").style.backgroundColor = "white";
-    document.getElementById("span_sign_up").innerHTML = "Must be valid email. example@yourdomain.com";
 
     return false;
 
@@ -1144,11 +1197,34 @@ var register_first_name = document.getElementById("register_first_name").value;
 
 }
 
-function arithmetic(){
 
+
+
+function arithmetic(){
+    
+var price = onfocusout_validate_price_Data();
+var price_open = onfocusout_validate_price_open_Data();
+var day_high = onfocusout_validate_day_high_Data();
+var day_low = onfocusout_validate_day_low_Data();
+
+if (day_high === false || day_low === false || price === false || price_open === false) {
+
+document.getElementById("Stock_market_Stats").style.borderColor = "red" ;
+document.getElementById("Stock_market_Stats").style.backgroundColor = "brown";
+return false;
+
+}
+else {
+
+document.getElementById("Stock_market_Stats").style.borderColor = "white";
   percent_change_since_open_arithmetic();
   percent_change_from_day_low_arithmetic();
   percent_change_from_day_high_arithmetic();
+document.getElementById("Stock_market_Stats").style.backgroundColor = "orange";
+    
+
+}
+
 
 
 }
